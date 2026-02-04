@@ -1,0 +1,86 @@
+/* 1. SHARED STYLES (Apply to both Mobile and PC) */
+.Hero {
+    display: flex;
+    margin-top: 30px;
+}
+
+img {
+    width: 300px;
+    border-radius: 30px;
+}
+
+.greet {
+    font-size: 17px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 34px;
+    margin: 0;
+}
+
+.profession {
+    font-weight: 400;
+    color: rgb(104, 102, 102);
+    margin-top: 10px;
+}
+
+.hero-description {
+    margin-bottom: auto;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.download {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+
+.btn-icon {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-icon svg {
+    height: 30px;
+    width: 30px;
+}
+
+/* 2. MOBILE SPECIFIC (Default layout) */
+@media (max-width: 767px) {
+    .Hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Centers text on mobile */
+    }
+    
+    .hero-description {
+        width: 90%; /* Fixed width of 500px will break mobile screens! */
+        max-width: 500px;
+    }
+}
+
+/* 3. PC SPECIFIC (Override for large screens) */
+@media (min-width: 768px) {
+    .Hero {
+        flex-direction: row; /* Side-by-side layout */
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hero-description {
+        width: 500px;
+    }
+}
