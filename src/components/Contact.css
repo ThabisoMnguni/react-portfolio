@@ -1,0 +1,9 @@
+.comm-method{
+    display: flex;
+    justify-content: space-between;
+}
+
+svg{
+    color: red;
+    border-color: yellow;
+}
